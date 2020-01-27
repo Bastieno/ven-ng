@@ -1,34 +1,19 @@
 {
-  "name": "ven-ng",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+  "name": "baz-shop",
+  "engines": {
+    "node": "12.13.1",
+    "npm": "6.12.1"
   },
+  "version": "1.0.0",
+  "description": "Ven technical test",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "client": "cd client && npm install",
+    "server": "cd server && npm install",
+    "build": "cd client && npm run build",
+    "prod": "npm run build --prefix server",
+    "start": "npm run start --prefix server",
+    "heroku-postbuild": "npm run client && npm run server --no-shrinkwrap && npm run prod && npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "Francis Nduamaka",
+  "license": "ISC"
 }
